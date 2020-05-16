@@ -30,7 +30,7 @@ const defaultOptions = {
  */
 
 const helper = (options) => {
-    const _options = Object.assign(defaultOptions, options || {});
+    const _options = Object.assign({}, defaultOptions, options || {});
     return async (ctx, next) => {
         for (const key in _options) {
             if (_options[key]) {

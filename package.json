@@ -1,6 +1,6 @@
 {
   "name": "koa-state-helper",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "state middleware for koa",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,5 @@
     "url": "https://github.com/laola2013/koa-state-helper/issues"
   },
   "homepage": "https://github.com/laola2013/koa-state-helper#readme",
-  "dependencies": {
-    "koa": "^2.11.0"
-  }
+  "dependencies": {}
 }

@@ -15,7 +15,7 @@ npm install koa-state-helper
 
 const Koa = require('koa');
 const app = new Koa();
-const helper = require('koa-helper');
+const helper = require('koa-state-helper');
 
 app.use(helper());
 
@@ -38,7 +38,7 @@ export async function Home(ctx) {
 
 const Koa = require('koa');
 const app = new Koa();
-const helper = require('koa-helper');
+const helper = require('koa-state-helper');
 
 app.use(helper({
     isMobile: (ctx) => { // ...do something },
