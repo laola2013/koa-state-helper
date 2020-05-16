@@ -1,5 +1,5 @@
 {
-  "name": "koa-helper",
+  "name": "koa-state-helper",
   "version": "0.0.1",
   "description": "state middleware for koa",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "helper"
   ],
   "author": "littlebee",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/laola2013/koa-helper/issues"
   },
