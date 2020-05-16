@@ -12,19 +12,22 @@ const isWechat = (ctx) => {
     return ua.match(/MicroMessenger/i) && ua.match(/MicroMessenger/i)[0] === "micromessenger";
 };
 
-/**
- * @param [object] options
- * [Boolean or Function] options[key]:
- * default is Function，development can pass in new rewrites
- * Boolen must be false value that means not to use
- */
-
 const defaultOptions = {
     isMobile,
     isWechat,
     isDevEnv: (ctx) => process.env.NODE_ENV === 'development',
     header: (ctx) => ctx.request.header
 }
+
+/**
+ * @param [object] options
+ * [Function or Boolean(false)] options[key]:
+ * - [Function] isMobile: default is valid
+ * - [Function] isWechat: default is valid
+ * - [Function] isDevEnv: default is valid
+ * - [Function] header: default is valid
+ * all of the above are built-in methods, you can pass in false to invalid or pass in new method to rewrite
+ */
 
 const helper = (options) => {
     const _options = Object.assign(defaultOptions, options || {});
