@@ -1,0 +1,28 @@
+{
+  "name": "koa-helper",
+  "version": "0.0.1",
+  "description": "state middleware for koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/laola2013/koa-helper.git"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "state",
+    "helper"
+  ],
+  "author": "littlebee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laola2013/koa-helper/issues"
+  },
+  "homepage": "https://github.com/laola2013/koa-helper#readme",
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
+}
