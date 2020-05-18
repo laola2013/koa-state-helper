@@ -1,6 +1,6 @@
 # koa-state-helper
 
-state middleware for koa
+State middleware for koa
 
 ## Installation
 
@@ -14,14 +14,16 @@ npm install koa-state-helper
 // app.js
 
 const Koa = require('koa');
+const helper = require('koa-helper');
+
 const app = new Koa();
-const helper = require('koa-state-helper');
 
 app.use(helper());
 
 app.listen(3000);
 
 // controller.js
+
 export async function Home(ctx) {
     const isMobile = ctx.state.isMobile(ctx);
     await ctx.render('home/home.njk', {
@@ -37,8 +39,9 @@ export async function Home(ctx) {
 // app.js
 
 const Koa = require('koa');
+const helper = require('koa-helper');
+
 const app = new Koa();
-const helper = require('koa-state-helper');
 
 app.use(helper({
     isMobile: (ctx) => { // ...do something },
@@ -61,8 +64,8 @@ app.listen(3000);
  */
 ```
 
-* defaultOptions‘s value is `Function`，development can pass in new method to rewrite，
-If you pass in a value(eg. `""`、`null` or `false`) parsed by Boolean as false, it will be considered that you don’t want to use it and 
+* DefaultOptions‘s value is `Function`，developer can pass in new method to rewrite，
+If you pass in a value(eg. `""`、`null` or `undefined`) parsed by `Boolean` method as false, it will be considered that you don’t want to use it and 
 it will not appear in the state
-* allows you to extend the state, value must be `funciton`, 
+* Allows you to extend the state, value must be `Funciton`, 
 whether return value depends on your application scenario
