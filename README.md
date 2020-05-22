@@ -14,7 +14,7 @@ npm install koa-state-helper
 // app.js
 
 const Koa = require('koa');
-const helper = require('koa-helper');
+const helper = require('koa-state-helper');
 
 const app = new Koa();
 
@@ -39,7 +39,7 @@ export async function Home(ctx) {
 // app.js
 
 const Koa = require('koa');
-const helper = require('koa-helper');
+const helper = require('koa-state-helper');
 
 const app = new Koa();
 
